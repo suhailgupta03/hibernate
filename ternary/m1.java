@@ -1,15 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package pojo;
-
-import java.util.Map;
-
-/**
- *
- * @author user
- */
 public class m1 {
     private int r_no;
     private String s_name;

@@ -1,9 +1,3 @@
-
-package pojo;
-import java.util.TreeMap;
-import org.hibernate.*;
-import org.hibernate.cfg.*;
-
 public class runner {
     public static void main(String args[]) {
         Configuration config = new Configuration().configure();
