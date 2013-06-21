@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="pojo.m1" table="m1">
+      <id name="r_no">
+          <generator class="increment" />
+      </id>
+      <property name="s_name" />
+      <map name="map" table="m4" cascade="all" sort="pojo.m4">
+          <key column="r_no" />
+          <index-many-to-many class="pojo.m2" column="t1" /> <!-- r_no as index !-->
+          <many-to-many class="pojo.m3" column="t2" /> <!-- r_no + total OR class m3 as key !-->
+      </map>
+  </class>
+  
+  <class name="pojo.m2" table="m2">
+      <id name="r_no">
+          <generator class="increment" />
+      </id>
+  </class>
+  
+  <class name="pojo.m3" table="m3">
+      <id name="r_no">
+          <generator class="increment" />
+      </id>
+      <property name="total" />
+  </class>
+      
+</hibernate-mapping>
